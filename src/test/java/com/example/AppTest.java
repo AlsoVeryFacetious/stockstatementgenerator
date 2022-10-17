@@ -1,20 +1,17 @@
 package com.example;
 
-import static org.junit.Assert.assertTrue;
+import java.io.File;
 
 import org.junit.Test;
 
 /**
- * Unit test for simple App.
+ * Unit test for methods 
  */
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void testFileValidation() throws Exception {        
+        File f = new File("Insert html file dir here");
+        f.exists();
     }
 }
