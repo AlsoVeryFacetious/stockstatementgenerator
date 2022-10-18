@@ -1,9 +1,9 @@
 package com.example;
 
 import java.io.FileReader;
+import java.util.Iterator;
 
-import javax.swing.text.html.parser.Parser;
-
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -11,16 +11,16 @@ public class App
 {
     public static void main( String[] args )
     {
-        
+        readJSON();
     }
     
     public static void readJSON() {
+        JSONParser parser = new JSONParser();
         try{
-            JSONParser parser = new JSONParser();
-            Object obj = parser.parse(new FileReader("stockstatementgenerator/stock_transations-3.by.account.holder.json"));
-            JSONObject jsonObject = (JSONObject)obj;
-            // Insert variables here to pull from JSON file
-            String account5 = (String)JSONObject.get("account_number");
+            Object obj = parser.parse(new FileReader("stock_transations-3.by.account.holder.json"));
+            JSONArray array = new JSONArray();
+            String fname = (String)array.get("first_name");
+            System.out.println(fname);
         } catch(Exception e) {
             e.printStackTrace();
         }
