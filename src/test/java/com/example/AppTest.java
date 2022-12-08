@@ -11,7 +11,7 @@ public class AppTest
 {
     @Test
     public void testFileValidation() throws Exception {        
-        File f = new File("Insert html file dir here");
+        File f = new File("stock_transations-3.by.account.holder.json");
         f.exists();
     }
 }
